@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ─── Security Headers ─────────────────────────────────────────────── -->
+    <!-- Content Security Policy: restrict resource origins -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src  'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com;
+        style-src   'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src    'self' https://fonts.gstatic.com;
+        img-src     'self' data: blob: https: http:;
+        media-src   'self' https: blob:;
+        connect-src 'self'
+                    https://*.supabase.co
+                    https://*.supabase.in
+                    https://rapid-mouse-85a4.hemankumar-chandrasekar.workers.dev
+                    https://generativelanguage.googleapis.com
+                    https://api.mapbox.com
+                    https://*.mapbox.com
+                    https://nominatim.openstreetmap.org
+                    https://photon.komoot.io
+                    https://router.project-osrm.org
+                    https://*.basemaps.cartocdn.com
+                    https://server.arcgisonline.com
+                    https://*.tile.openstreetmap.org
+                    https://*.tile.opentopomap.org
+                    wss://*.supabase.co;
+        frame-src   'none';
+        object-src  'none';
+        base-uri    'self';
+        form-action 'self';
+      "
+    />
+    <!-- Referrer: never send referrer to third parties -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Permissions policy: block sensitive browser APIs -->
+    <meta
+      http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=(self), payment=()"
+    />
+    <!-- Prevent MIME-sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+
+    <title>WanderWise - AI-Powered Travel Planning</title>
+    <meta
+      name="description"
+      content="Discover your perfect travel destination with AI-powered recommendations, personalized itineraries, and smart budget planning."
+    />
+    <meta name="author" content="WanderWise" />
+
+    <meta property="og:title" content="WanderWise - AI Travel Assistant" />
+    <meta
+      property="og:description"
+      content="Plan your dream vacation with AI-powered travel recommendations and personalized itineraries."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/wanderwise-og.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WanderWise - AI Travel Assistant" />
+    <meta
+      name="twitter:description"
+      content="Plan your dream vacation with AI-powered travel recommendations"
+    />
+    <meta name="twitter:image" content="/wanderwise-og.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts: Stitch Design System -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
